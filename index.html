@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Misión 35</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #5DADE2; /* Azul Gnius */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .banner {
+            background-color: #85C1E9; /* Azul más claro */
+            color: #333;
+            padding: 15px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .banner:hover {
+            background-color: #AED6F1;
+        }
+        .banner .title {
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 8px;
+            border-top: 1px solid #fff;
+            padding-top: 8px;
+            color: #1A5276; /* Azul oscuro texto */
+        }
+        .content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background-color: #EAF2F8; /* Azul muy claro fondo */
+            border-radius: 5px;
+        }
+        .dialogue {
+            background-color: #FEF9E7; /* Amarillo pálido para diálogo */
+            border: 1px solid #FAD7A0;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 15px 0;
+            text-align: left; /* Cambiado a izquierda para mejor lectura */
+            font-style: italic;
+            color: #784212; /* Marrón oscuro texto */
+            position: relative; /* Para el bocadillo */
+            border-left: 5px solid #F39C12; /* Naranja */
+        }
+
+        .dropdown {
+            margin-bottom: 25px;
+            text-align: center; /* Centrar dropdown */
+        }
+        .dropdown label {
+            font-weight: bold;
+            color: #1A5276;
+        }
+        .dropdown select {
+            font-size: 1.1em;
+            padding: 8px 12px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: 1px solid #85C1E9;
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px;}
+        td { padding: 12px; border: 1px solid #AED6F1; vertical-align: top; }
+        td strong { color: #1A5276; }
+        .level-title { /* Clase específica para el título del nivel */
+             text-align: center;
+             color: #5DADE2;
+             font-size: 1.4em;
+             margin-bottom: 20px;
+        }
+        /* Clases para ocultar/mostrar contenido por nivel */
+        .k1-content, .k2-content, .k3-content { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Playbook - Misión 35: El Misterio del Tesoro Escondido</h1>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1 (3 años)</option>
+                <option value="K2">K2 (4 años)</option>
+                <option value="K3">K3 (5 años)</option>
+            </select>
+        </div>
+
+        <h2 id="selected-level" class="level-title">Nivel: K1 (3 años)</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0: Revisión de Materiales -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales</div>
+        <div class="subtitle">Objetivo: Asegurarse de que todos los materiales necesarios para la clase estén disponibles y preparados antes de que lleguen los niños.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Revisa que tengas listos los materiales indicados en la **DIAPOSITIVA 1**: 1 Kinderbot y 10 iBricks por cada pareja. Kinderbots cargados.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1: Bienvenida e Introducción -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: ¡Mapa del Tesoro Encontrado! ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Objetivo: Introducir la temática de búsqueda del tesoro y la necesidad de tomar decisiones basadas en un mapa.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 2** “Bienvenida”. Saluda como valientes buscadores de tesoros.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡Ahoy, valientes buscadores de tesoros del CODE SQUAD! ¡Prepárense para una aventura increíble! ¡Hoy hemos encontrado un mapa muy, muy antiguo! ¡Un mapa que parece llevar a un... TESORO ESCONDIDO! ¿Se imaginan? ¡Monedas de oro brillante, joyas resplandecientes! ¿Están listos para seguir el mapa?"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 3** "Gimnasio CODE SQUAD". Explica que necesitan entrenar la mente para leer mapas y elegir rutas.</td>
+                <td>
+                     <div class="dialogue">
+                        "Pero los mapas del tesoro a veces son complicados... ¡tienen caminos que se dividen! ¡Hay que tomar decisiones importantes! Para ser los mejores buscadores de tesoros, ¡nuestro cerebro tiene que ser un experto en elegir caminos! ¡Vamos al Gimnasio Cerebral a practicar cómo decidir y seguir diferentes rutas!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2: Baile de Algoritmos -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-algoritmos')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Objetivo: Practicar seguir secuencias con giros, simulando cambios de dirección en un mapa.</div>
+    </div>
+    <div id="baile-algoritmos" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 4** “Baile de Algoritmos”. Guía el baile, enfatizando los giros como decisiones de ruta.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Buscadores de tesoros, a bailar! ¡Este baile es como seguir un mapa musical! 'Adelante' para avanzar por el camino... ¡'Girar Izquierda' o 'Girar Derecha' cuando el mapa nos dice que cambiemos de dirección! ¡Hay que estar atentos a las instrucciones para no perdernos! ¡Música!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3: Planteamiento del Problema - La Encrucijada del Pirata -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">🗺️ Actividad 3: ¿Cueva de Gemas o Cascada Dorada? ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Presentar la historia del mapa con dos posibles tesoros, construir la bifurcación y definir el reto de elegir y programar una ruta.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 5**. Narra la historia del mapa del Pirata Barba-Arcoíris y la encrucijada.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Miren el mapa, equipo! ¡Es del famoso Pirata Barba-Arcoíris! ¡Dice que siguió este camino y encontró un tesoro increíble! Pero... ¡el mapa muestra una encrucijada! ¡Un punto donde el camino se divide en DOS! Un camino (señala izquierda) va a la misteriosa 'Cueva de las Gemas Brillantes'. ¡El otro camino (señala derecha) va a la espectacular 'Cascada de Monedas Doradas'! ¡Ambos suenan geniales! ¿Cuál elegirá Kinderbot?"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 6**. Explica el reto: construir la encrucijada y los dos destinos con iBricks. Cada equipo *elegirá* un destino y programará a Kinderbot para llegar *sólo* a ese lugar.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Nuestra misión, buscadores de tesoros! Primero, construiremos la encrucijada del mapa con nuestros bloques gigantes (iBricks). Un bloque de inicio, luego el camino se divide: un camino a la izquierda que termina en un bloque 'Cueva de Gemas', y otro a la derecha que termina en un bloque 'Cascada Dorada'. (Demuestra forma de Y). Ahora, ¡la decisión! Cada equipo tiene que **elegir**: ¿Quieren ir a por las Gemas o a por las Monedas? Una vez que elijan, ¡programarán a Kinderbot para seguir SÓLO el camino hacia el tesoro que escogieron! ¿Listos para elegir su aventura?"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4: Formación de Parejas -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: ¡Equipos Caza-Tesoros! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Formar parejas para decidir el destino, construir la ruta y planificar la programación.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 7** “Formación de Equipos”. Explica que las grandes búsquedas del tesoro se hacen en equipo. Forma las parejas.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡A la carga, caza-tesoros! ¡Buscar tesoros escondidos es más emocionante con un compañero! ¡Juntos pueden leer mejor el mapa, decidir qué camino tomar y programar a Kinderbot para que no se pierda! ¡Formen sus Equipos Caza-Tesoros! ¡Elijan a su compañero de expedición!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Verifica que todos tengan pareja. Anímales a construir la encrucijada y a decidir juntos a qué tesoro irán primero.</td>
+                <td>
+                     <div class="dialogue">
+                        "¿Equipos listos? ¡Excelente! Ahora, construyan la encrucijada del mapa con sus bloques. ¡El inicio y los dos caminos! Y lo más importante: ¡hablen y decidan! ¿Irán por las Gemas Brillantes💎 o por las Monedas Doradas💰? ¡Una vez que lo decidan, prepárense para programar esa ruta!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5: Reto de Codificación - ¡Programando la Ruta Elegida! -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('reto-codificacion')">
+        <div class="title">⌨️ Actividad 5: ¡Código hacia el Tesoro! ⏰ Tiempo: 6 minutos</div>
+        <div class="subtitle">Objetivo: Construir el escenario de bifurcación y programar la secuencia para alcanzar el tesoro elegido, adaptando la complejidad al nivel.</div>
+    </div>
+    <div id="reto-codificacion" class="content">
+        <table>
+            <!-- Paso Común: Construir Escenario y Repasar Botones -->
+             <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la **DIAPOSITIVA 8** "¡A Construir y Recordar!". Guía la construcción de la bifurcación y los dos destinos (cofres/bloques). Repasa botones Adelante, Girar Izquierda, Girar Derecha.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Caza-tesoros, armen su mapa! Bloque de inicio, camino que se divide, bloque 'Gemas' a la izquierda, bloque 'Monedas' a la derecha. ¡Perfecto! Recordemos los botones: Adelante para avanzar, Girar Izquierda para ir a las Gemas, Girar Derecha para ir a las Monedas. ¡Listos para programar SU ruta elegida!"
+                    </div>
+                </td>
+            </tr>
+            <!-- Contenido Específico por Nivel -->
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 2 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 9** "Misión K1: Camino Directo". Guía para programar 3 pasos: Avanzar a la bifurcación, Girar (Izq/Der según elección), Avanzar al tesoro.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¿Eligieron Gemas (Izquierda) o Monedas (Derecha)? ¡Muy bien! Código simple: Paso 1: ¡Avanza hasta donde se dividen los caminos! -> 'Adelante' UNA vez. Paso 2: ¡Gira hacia tu tesoro! -> 'Girar Izquierda' (si vas a Gemas) o 'Girar Derecha' (si vas a Monedas) UNA vez. Paso 3: ¡Avanza hasta el tesoro! -> 'Adelante' UNA vez más. Código: Adelante, Girar (Izq/Der), Adelante. ¡Preparen su código, sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                <td><strong>PASO 2 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 10** "Misión K2: Ruta Extendida". Guía para programar 4-5 pasos: Avanzar, Girar, y 2 o 3 pasos más de 'Adelante' para llegar al tesoro (caminos un poco más largos).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Caza-tesoros K2! ¿Gemas o Monedas? ¡Ok! El camino es un poco más largo. Código: Paso 1: Avanza a la división -> 'Adelante'. Paso 2: Gira hacia tu tesoro -> 'Girar Izquierda' o 'Girar Derecha'. Pasos 3 y 4 (y quizás 5): ¡Avanza hasta llegar! -> 'Adelante', 'Adelante' (¡o tres veces!). ¡Serán 4 o 5 pasos en total! Planean bien cuántos 'Adelante' necesitan después de girar. ¡Preparen el código, sin activar 'Go'!"
+                    </div>
+                </td>
+            </tr>
+            <!-- K3 -->
+             <tr class="k3-content">
+                <td><strong>PASO 2 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 11** "Misión K3: ¡Ruta con Obstáculo!". Guía para poner un iBrick-obstáculo en cada camino y programar 6-7 pasos para rodearlo y llegar al tesoro elegido.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Expertos K3! ¡El Pirata Barba-Arcoíris puso trampas! Pongan un bloque-roca en medio de CADA camino después de la división. ¿Eligieron Gemas o Monedas? ¡Ahora hay que rodear la roca! Plan: Avanza (a la división), Gira (hacia el tesoro), Avanza (cerca de la roca), Gira (para esquivar), Avanza (al lado de la roca), Gira (para volver al camino), Avanza (¡al tesoro!). ¡Son unos 6 o 7 pasos! (Ej: A, GI, A, GD, A, GI, A). ¡Requiere buena planificación! ¡Preparen su código de evasión, sin presionar 'Go'!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6: ¡Búsqueda del Tesoro! -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('probando-tesoro')">
+        <div class="title">🚀 Actividad 6: ¡En Busca del Botín! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Ejecutar el código del camino elegido y observar si Kinderbot llega al tesoro correcto, superando obstáculos si los hay.</div>
+    </div>
+    <div id="probando-tesoro" class="content">
+        <table>
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 1 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 12** "¡Éxito K1!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar si sigue la secuencia de 3 pasos y llega al tesoro elegido. Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¡Kinderbot listo en la 'X' del mapa! ¿Preparados con su código de 3 pasos para las Gemas/Monedas? ¡Presionen 'Go'! Avanza... Gira... ¡Avanza! ¿Llegó al tesoro que eligieron? ¡SIIII! ¡Tesoro encontrado! ¡Son geniales!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                 <td><strong>PASO 1 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 13** "¡Éxito K2!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar si sigue la secuencia de 4-5 pasos y llega al tesoro elegido. Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Caza-tesoros K2! ¡Kinderbot al inicio! ¿Listos con su código de 4 o 5 pasos? ¡Presionen 'Go'! ¡Sigamos la ruta! Avanza... Gira... Avanza... Avanza... ¿Llegó? ¡SIIII! ¡El mapa los llevó directo al botín! ¡Felicidades!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K3 -->
+             <tr class="k3-content">
+                 <td><strong>PASO 1 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 14** "¡Éxito K3!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar si logra esquivar la roca y llegar al tesoro elegido. Animar a ajustar si es necesario. Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Expertos K3! ¡Kinderbot en posición! ¿Listos con su código de 6 o 7 pasos para esquivar la roca? ¡Presionen 'Go'! ¡Miren con atención! Avanza... Gira... Avanza... ¡Esquiva!... Avanza... ¡Gira!... Avanza... ¿Llegó al tesoro? ¡INCREÍBLE! ¡Ni las trampas los detienen! Si no salió perfecto, ¡recuerden ajustar y volver a intentar! ¡Resolverlo es la recompensa!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7: Mensaje del Cuartel (Omitida para Misión 35) -->
+
+<!-- Actividad 8: Conclusión y Reflexión -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion-reflexion')">
+        <div class="title">🏁 Actividad 8: ¡Tesoro Descubierto y Reflexión! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Celebrar el hallazgo del tesoro, reforzar la idea de que una elección lleva a un resultado diferente y reflexionar sobre la planificación de rutas.</div>
+    </div>
+    <div id="conclusion-reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 15** "¡Misión Cumplida!". Cierra la historia (Kinderbot con el tesoro elegido). Realiza preguntas de reflexión enfocadas en la elección y la ruta.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡LO ENCONTRAMOS, CODE SQUAD! ¡Cada equipo eligió su aventura y guió a Kinderbot hasta el tesoro escondido! ¡Algunos encontraron Gemas Brillantes💎, otros Monedas Doradas💰! ¡El Pirata Barba-Arcoíris estaría orgulloso! Pensemos en esta búsqueda:
+1. ¿Todos llegaron al mismo tesoro? (No) ¿Por qué? (¡Porque eligieron caminos diferentes!)
+2. ¿Qué tuvimos que programar en Kinderbot para que siguiera el camino elegido? (Pasos Adelante y Giros)
+3. ¿Fue divertido poder elegir a dónde ir y programar esa ruta?
+¡Han aprendido que tomar decisiones cambia el camino y que pueden programar a Kinderbot para seguir la ruta que ustedes elijan! ¡Son unos exploradores y programadores excepcionales! ¡Hasta la próxima búsqueda!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+        <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        var parentActivity = content.closest('.activity');
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            parentActivity.classList.remove('active');
+        } else {
+            content.style.display = "block";
+            parentActivity.classList.add('active');
+        }
+    }
+
+    function updateContent() {
+        var level = document.getElementById("class-level").value;
+        var levelText = document.getElementById("class-level").options[document.getElementById("class-level").selectedIndex].text;
+        document.getElementById("selected-level").innerText = "Nivel: " + levelText;
+
+        var k1Contents = document.querySelectorAll('.k1-content');
+        var k2Contents = document.querySelectorAll('.k2-content');
+        var k3Contents = document.querySelectorAll('.k3-content');
+
+        k1Contents.forEach(function(el) { el.style.display = 'none'; });
+        k2Contents.forEach(function(el) { el.style.display = 'none'; });
+        k3Contents.forEach(function(el) { el.style.display = 'none'; });
+
+        var selectedContents = document.querySelectorAll('.' + level.toLowerCase() + '-content');
+        selectedContents.forEach(function(el) {
+             el.style.display = 'table-row';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        updateContent();
+    });
+</script>
+
+</body>
+</html>
